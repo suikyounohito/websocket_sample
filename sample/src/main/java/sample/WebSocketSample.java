@@ -8,25 +8,25 @@ import org.eclipse.jetty.websocket.api.annotations.WebSocket;
 
 @WebSocket
 public class WebSocketSample {
-    private Session session;
+  private Session session;
 
-    @OnWebSocketConnect
-    public void onConnect(Session session) {
-        this.session = session;
-        WebSocketBroadcaster.getInstance().join(this);
-    }
+  @OnWebSocketConnect
+  public void onConnect(Session session) {
+    this.session = session;
+    WebSocketBroadcaster.getInstance().join(this);
+  }
 
-    @OnWebSocketMessage
-    public void onText(String message) {
-        WebSocketBroadcaster.getInstance().sendToAll(message);
-    }
+  @OnWebSocketMessage
+  public void onText(String message) {
+    WebSocketBroadcaster.getInstance().sendToAll(message);
+  }
 
-    @OnWebSocketClose
-    public void onClose(int statusCode, String reason) {
-        WebSocketBroadcaster.getInstance().bye(this);
-    }
+  @OnWebSocketClose
+  public void onClose(int statusCode, String reason) {
+    WebSocketBroadcaster.getInstance().bye(this);
+  }
 
-    public Session getSession(){
-        return this.session;
-    }
+  public Session getSession(){
+    return this.session;
+  }
 }

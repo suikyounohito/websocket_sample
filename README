@@ -2,8 +2,16 @@
 This sample is created by following sapmle below:
 - http://qiita.com/supertaihei02/items/b5d55f5d73ada010d6d1
 
-* run sample
+* compile sample
 {{{
  $ mvn clean package
+}}}
+
+* run sample
+{{{
  $ java -jar target/WebSocketSample-jar-with-dependencies.jar
+}}}
+ or 
+{{{
+ $ mvn jetty:run
 }}}
