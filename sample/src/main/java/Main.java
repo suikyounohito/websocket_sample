@@ -16,11 +16,13 @@ public class Main {
 
         // websocket handler
         WebSocketServletImpl wsservlet = new WebSocketServletImpl();
-        ServletContextHandler contextHandler = new ServletContextHandler(ServletContextHandler.SESSIONS);
+        ServletContextHandler contextHandler = new ServletContextHandler(
+            ServletContextHandler.SESSIONS);
         contextHandler.addServlet(new ServletHolder(wsservlet), "/");
 
         HandlerList handlers = new HandlerList();
-        handlers.setHandlers(new Handler[] { resourceHandler, contextHandler });
+        handlers.setHandlers(new Handler[] {
+            resourceHandler, contextHandler});
         server.setHandler(handlers);
 
         try {

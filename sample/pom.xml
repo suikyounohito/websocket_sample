@@ -12,8 +12,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <package.package-name>sample</package.package-name>
     <package.main-class>Main</package.main-class>
-    <package.base-name>${name}-${version}</package.base-name>
-    <package.jar-name>${name}.jar</package.jar-name>
+    <package.base-name>${project.name}-${project.version}</package.base-name>
+    <package.jar-name>${project.name}.jar</package.jar-name>
   </properties>
 
   <dependencies>
@@ -68,6 +68,7 @@
           <optimize>false</optimize>
           <fork>true</fork>
         </configuration>
+        <version>3.1</version>
       </plugin>
       <plugin>
         <groupId>org.eclipse.jetty</groupId>
@@ -131,6 +132,7 @@
             </manifestEntries>
           </archive>
         </configuration>
+        <version>2.5</version>
       </plugin>
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
@@ -158,6 +160,6 @@
         </executions>
       </plugin>
     </plugins>
-    <finalName>${name}</finalName>
+    <finalName>${project.name}</finalName>
   </build>
 </project>

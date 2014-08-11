@@ -1,2 +1,9 @@
+* description
 This sample is created by following sapmle below:
 - http://qiita.com/supertaihei02/items/b5d55f5d73ada010d6d1
+
+* run sample
+{{{
+ $ mvn clean package
+ $ java -jar target/WebSocketSample-jar-with-dependencies.jar
+}}}
