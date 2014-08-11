@@ -1,0 +1,22 @@
+#+AUTHOR:
+
+* Description
+This sample is created by following sapmle below:
+ - http://qiita.com/supertaihei02/items/b5d55f5d73ada010d6d1
+ - http://javascript-api.sophia-it.com/reference/WebSocketのサンプルコード
+
+* Run sample
+** Compile
+Commands:
+#+begin_src sh
+$ mvn clean package
+#+end_src
+** Run 
+Commands:
+#+begin_src shell
+$ mvn jetty:run
+#+end_src
+or
+#+begin_src shell
+$ java -jar target/WebSocketSample-jar-with-dependencies.jar
+#+end_src
